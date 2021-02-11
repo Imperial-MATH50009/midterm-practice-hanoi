@@ -6,13 +6,13 @@ def test_standard_move():
     g = Game(3)
     g.move(0, 2)
     g.move(0, 1)
-    assert(g.stack(0), g.stack(1), g.stack(2)) == ([4], [3], [2]), \
-        "expected stacks of 0:[4], 1:[3], 2:[2]"
+    assert(g.stack(0), g.stack(1), g.stack(2)) == ([3], [2], [1]), \
+        "expected stacks of 0:[3], 1:[2], 2:[1]"
 
 
 @pytest.fixture
 def base_game():
-    """Return game state ((0, [5, 4]), (1, [3, 2]))"""
+    """Return game state ((0, [4, 3]), (1, [2, 1]))."""
     from hanoi.hanoi import Game
     g = Game(4)
     g.move(0, 1)
